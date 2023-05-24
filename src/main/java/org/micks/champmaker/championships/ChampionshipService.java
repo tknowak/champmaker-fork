@@ -24,6 +24,7 @@ public class ChampionshipService {
     @Autowired
     private RegisterRepository registerRepository;
 
+    // Testing sth
     public ChampionshipDTO getChampionship(long champId) throws EntityNotFoundException {
         Optional<ChampionshipEntity> optionalChampionship = championshipRepository.findById(champId);
         if (optionalChampionship.isPresent()) {
@@ -31,7 +32,7 @@ public class ChampionshipService {
             List<Long> registeredTeams = registerService.getRegisteredTeams(champId);
             return new ChampionshipDTO(championshipEntity.getNameChamp(), championshipEntity.getCity(), championshipEntity.getDate(), registeredTeams);
         } else {
-            throw new EntityNotFoundException("Can not find Championship with Id: " + champId);
+            throw new EntityNotFoundException("Cannot find Championship with Id: " + champId);
         }
     }
 
