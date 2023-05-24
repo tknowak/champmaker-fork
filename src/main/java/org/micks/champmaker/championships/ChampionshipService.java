@@ -24,6 +24,7 @@ public class ChampionshipService {
     @Autowired
     private RegisterRepository registerRepository;
 
+    // Testing sth
     public ChampionshipDTO getChampionship(long champId) throws EntityNotFoundException {
         Optional<ChampionshipEntity> optionalChampionship = championshipRepository.findById(champId);
         if (optionalChampionship.isPresent()) {
