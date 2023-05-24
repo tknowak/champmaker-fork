@@ -54,6 +54,6 @@ class ChampionshipServiceTest {
         // then
         assertThat(throwable)
                 .isInstanceOf(EntityNotFoundException.class)
-                .hasMessage("Can not find Championship with Id: 322");
+                .hasMessage("Cannot find Championship with Id: 322");
     }
 }
