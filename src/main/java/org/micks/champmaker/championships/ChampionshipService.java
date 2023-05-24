@@ -31,7 +31,7 @@ public class ChampionshipService {
             List<Long> registeredTeams = registerService.getRegisteredTeams(champId);
             return new ChampionshipDTO(championshipEntity.getNameChamp(), championshipEntity.getCity(), championshipEntity.getDate(), registeredTeams);
         } else {
-            throw new EntityNotFoundException("Can not find Championship with Id: " + champId);
+            throw new EntityNotFoundException("Cannot find Championship with Id: " + champId);
         }
     }
 
